@@ -9,36 +9,158 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="resources/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <title>Portfolio of Fabian Rossmann</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li>Top</li>
-                <li>About Me</li>
-                <li>Skills</li>
-                <li>Contact</li>
+    <!-- Navigation-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Fabian Rossmann</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="#start">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#aboutme">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav>
+    <!-- Content -->
+    <div class="container-fluid fill-height section-padding" id="start">
+        <div class="text-center">
+            <div id="particles-js"></div>
+        </div>
+
+    </div>
+    <hr />
+    <div class="container-fluid fill-height section-padding timeline-basic-style" id="aboutme">
+        <h1>Resume</h1>
+        <div class="container">
+            <div class="pb-2 mt-4 border-bottom">
+                <h1>Education</h1>
+            </div>
+            <ul class="timeline">
+                <li>
+                    <div class="timeline-badge"></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">Matura</h4>
+                            <p><small class="text-muted">2014-Present</small></p>
+                        </div>
+                        <div class="timeline-body">
+                            <p>HTL Pinkafeld</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-badge"><i class="glyphicon glyphicon-credit-card"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">Secondary School</h4>
+                            <p><small class="text-muted">2010-2014</small></p>
+                        </div>
+                        <div class="timeline-body">
+                            <p>WIKU BRG Graz</p>
+                        </div>
+                    </div>
+                </li>
             </ul>
-        </nav>
-    </header>
-    <article id="top">
-        <h1>top</h1>
-    </article>
-    <article id="aboutme">
-            <h1>About me</h1>
-    </article>
-    <article id="skills">
+        </div>
+        <div class="container">
+            <div class="pb-2 mt-4 border-bottom">
+                <h1>Experience</h1>
+            </div>
+            <ul class="timeline">
+                <li>
+                    <div class="timeline-badge danger"></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">Matura</h4>
+                            <p><small class="text-muted">2014-Present</small></p>
+                        </div>
+                        <div class="timeline-body">
+                            <p>HTL Pinkafeld</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-badge warning"><i class="glyphicon glyphicon-credit-card"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">Secondary School</h4>
+                            <p><small class="text-muted">2010-2014</small></p>
+                        </div>
+                        <div class="timeline-body">
+                            <p>WIKU BRG Graz</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge"><i class="glyphicon glyphicon-credit-card"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">Mussum ipsum cacilds</h4>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois
+                                divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis,
+                                nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta
+                                quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim.
+                                Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                        </div>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+    <hr />
+    <div class="container-fluid fill-height section-padding" id="skills">
         <h1>Skills</h1>
-    </article>
-    <article id="contact">
-            <h1>contact</h1>
-    </article>
-    <footer>
-        <p>&copy; 2018 Fabian Rossmann</p>
-    </footer>
+        <div class="row">
+            <div class="col-sm-6" id="skills-left">
+                <h2>Java</h2>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                </div>
+                <h2>Java</h2>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+            <div class="col-sm-6" id="skills-right">
+                <h2>Java</h2>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <h2>Java</h2>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <hr />
+    <div class="container-fluid fill-height section-padding" id="contact">
+        <h1>Contact me</h1>
+    </div>
+    <!-- Footer -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+        Fabian Rossmann
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -47,6 +169,22 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
+    <script src="resources/js/particles.js"></script>
+    <script src="resources/js/app.js"></script>
+    <!-- SmoothScroll -->
+    <script>
+        /*
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });*/
+    </script>
+
 </body>
 
 </html>
