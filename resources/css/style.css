@@ -3,7 +3,7 @@ body {
     height: 100%;
 }
 
-h1{
+h1 {
     word-wrap: break-word;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
@@ -25,13 +25,15 @@ h1{
     padding-left: 10rem;
     padding-right: 10rem;
 }
-@media screen and (max-width: 700px){
+
+@media screen and (max-width: 700px) {
     .main-section {
         padding-top: 3rem;
         padding-left: 0rem;
         padding-right: 0rem;
     }
 }
+
 .section-padding {
     padding: 10vh 0;
 }
@@ -269,7 +271,6 @@ h1{
     height: 200px;
     border-radius: 50%;
     display: block;
-
     margin: auto;
 }
 
@@ -290,36 +291,33 @@ h1{
 }
 
 .contact {
-    display:inline-block;
+    display: inline-block;
     width: 100%;
     text-align: center;
 }
 
-.contact a{
-    color:#475059;
+.contact a {
+    color: #475059;
     margin-right: 20px;
 }
+
 .contact a:hover {
     opacity: .5;
 }
 
-.project{
-    display:inline-block;
+.project {
+    display: inline-block;
     width: 100%;
     text-align: center;
 }
-.project img{
+
+.project img {
     margin-right: 20px;
     margin-bottom: 20px;
 }
 
 @media screen and (max-width: 600px) {
     #start {
-      visibility: hidden;
-      clear: both;
-      float: left;
-      margin: 10px auto 5px 20px;
-      width: 28%;
-      display: none;
+        visibility: hidden;
     }
-  }
+}
