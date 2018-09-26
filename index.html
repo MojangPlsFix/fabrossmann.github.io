@@ -40,9 +40,9 @@
     </nav>
     <!-- Content -->
     <div class="container-fluid particlebg" id="start">
-        <div class="particle-box" style="font-size:110px;font-weight:bold;">
-            <div class="particle-box-material">Hey <br>I'M FABIAN!</div>
-            <div class="particle-box-material" style="font-size:60px;">
+        <div class="particle-box" style="font-size:9vw;font-weight:bold;">
+            <div class="particle-box-material"><h1>Hey <br>I'M FABIAN!</h1></div>
+            <div class="particle-box-material" style="font-size: 4vw">
                 <h1>I'M A SOFTWARE DEVELOPER</h1>
             </div>
 
@@ -50,9 +50,7 @@
         <div class="scrolldown">
             <div class="scroller"><a href="#aboutme"><span></span>Scroll</a></div>
         </div>
-
-
-        <div id="particles-js"></div>
+        <div class="mobile" id="particles-js"></div>
     </div>
 
     <div class="main-section">
@@ -60,7 +58,7 @@
             <h1>About Me</h1>
             <div class="row">
                 <div class="col-sm-6">
-                    <img src="resources/images/me.jpg" class="img-responsive center-block portrait">
+                    <img src="resources/images/me.jpg" class="img-fluid center-block portrait">
                     <div class="portrait-title">
                         <h2>Fabian Roßmann</h2>
                         <h3>Software-Developer</h3>
@@ -86,7 +84,12 @@
                             <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90"
                                 aria-valuemin="0" aria-valuemax="100">Professional</div>
                         </div>
-                        <h2>C++</h2>
+                        <h2>C,C++</h2>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="0"
+                                aria-valuemin="0" aria-valuemax="100">Amateur</div>
+                        </div>
+                        <h2>SQL,PLSQL</h2>
                         <div class="progress">
                             <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="0"
                                 aria-valuemin="0" aria-valuemax="100">Amateur</div>
@@ -197,14 +200,42 @@
             <hr />
             <div class="container-fluid fill-height section-padding" id="projects">
                 <h1>Projects</h1>
+                <div class="project">
+                    <img src="https://dummyimage.com/200x200/fff/aaa" alt="project1" class="img-thumbnail">
+                    <img src="https://dummyimage.com/200x200/fff/aaa" alt="project2" class="img-thumbnail">
+                    <img src="https://dummyimage.com/200x200/fff/aaa" alt="project3" class="img-thumbnail">
+                    <img src="https://dummyimage.com/200x200/fff/aaa" alt="project3" class="img-thumbnail">
+                </div>
+                <div class="project">
+                    <img src="https://dummyimage.com/200x200/fff/aaa" alt="project1" class="img-thumbnail">
+                    <img src="https://dummyimage.com/200x200/fff/aaa" alt="project2" class="img-thumbnail">
+                    <img src="https://dummyimage.com/200x200/fff/aaa" alt="project3" class="img-thumbnail">
+                    <img src="https://dummyimage.com/200x200/fff/aaa" alt="project3" class="img-thumbnail">
+                </div>
             </div>
-            <br />
-            <div class="container-fluid fill-height section-padding" id="contact">
+            <hr />
+            <div class="container-fluid section-padding" id="contact">
                 <h1>Contact me</h1>
+                <div class="contact">
+                    <a href="mailto:fabian.rossmann@htlpinkafeld.at" target="_blank">
+                        <i class="fas fa-at fa-5x"></i>
+                    </a>
+                    <a href="http://github.com/fabrossmann" target="_blank">
+                        <i class="fab fa-github fa-5x "></i>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/fabrossmann/" target="_blank">
+                        <i class="fab fa-linkedin-in fa-5x"></i>
+                    </a>
+
+                    <a href="resources/data/cv.pdf" target="_blank">
+                        <i class="far fa-file-alt fa-5x"></i>
+                    </a>
+                </div>
             </div>
         </div>
         <!-- Footer -->
-        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+        <div class="container-fluid footer-copyright text-center py-3">© 2018 Copyright:
             Fabian Rossmann
         </div>
         <!-- Optional JavaScript -->

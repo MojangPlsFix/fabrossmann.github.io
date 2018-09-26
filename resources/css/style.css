@@ -1,7 +1,15 @@
 body {
     font-family: 'Roboto', sans-serif;
     height: 100%;
+}
 
+h1{
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
 }
 
 .fill-height {
@@ -204,15 +212,14 @@ body {
 
 .scroller a {
     position: absolute;
-    bottom: 20px;
+    bottom: 1%;
     left: 50%;
     z-index: 2;
     display: inline-block;
     -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
     color: #fff;
-    font: normal 400 20px/1 'Josefin Sans', sans-serif;
-    letter-spacing: .1em;
+    font: normal 400 0, 2vw 'Roboto', sans-serif;
     text-decoration: none;
     transition: opacity .3s;
 }
@@ -275,3 +282,38 @@ body {
     color: rgba(0, 0, 0, 0.54);
     margin: 0px 0 10px 0;
 }
+
+.contact {
+    display:inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.contact a{
+    color:#475059;
+    margin-right: 20px;
+}
+.contact a:hover {
+    opacity: .5;
+}
+
+.project{
+    display:inline-block;
+    width: 100%;
+    text-align: center;
+}
+.project img{
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    #start {
+      visibility: hidden;
+      clear: both;
+      float: left;
+      margin: 10px auto 5px 20px;
+      width: 28%;
+      display: none;
+    }
+  }
