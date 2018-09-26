@@ -320,4 +320,7 @@ h1 {
     #start {
         visibility: hidden;
     }
+    #startitem {
+        visibility: hidden;
+    }
 }
