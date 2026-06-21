@@ -1,0 +1,22 @@
+---
+import { Button } from "@/components/ui/button";
+import { profile } from "@/data/profile";
+
+const firstName = profile.name.split(" ")[0];
+---
+<section class="flex min-h-[80vh] flex-col items-center justify-center px-6 text-center">
+  <p class="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">{profile.title}</p>
+  <h1 class="text-5xl font-medium tracking-tight sm:text-6xl">Hi, I'm {firstName}.</h1>
+  <p class="mt-4 max-w-xl text-muted-foreground">
+    I build software at Knapp Systemintegration, and tinker on the side as admin &amp; developer
+    for MyFTB.
+  </p>
+  <div class="mt-8 flex gap-3">
+    <Button asChild>
+      <a href="#about">About me</a>
+    </Button>
+    <Button asChild variant="outline">
+      <a href="#contact">Get in touch</a>
+    </Button>
+  </div>
+</section>
