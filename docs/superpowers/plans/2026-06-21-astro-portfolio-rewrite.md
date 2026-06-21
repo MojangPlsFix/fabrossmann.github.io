@@ -876,7 +876,7 @@ Each component file has one section's worth of responsibility; `dates.ts` and `p
           <p class="text-sm text-muted-foreground">{profile.title}</p>
         </div>
         <Button asChild variant="outline" size="sm">
-          <a href="/cv.pdf" target="_blank">Download CV</a>
+          <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
         </Button>
       </div>
       <div>
