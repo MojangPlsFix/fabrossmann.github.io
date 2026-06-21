@@ -1,0 +1,20 @@
+---
+import { getCollection } from "astro:content";
+
+const groups = (await getCollection("qualifications")).sort((a, b) => a.data.order - b.data.order);
+---
+<section id="qualifications" class="mx-auto max-w-3xl px-6 py-24">
+  <h2 class="text-3xl font-medium">Extra Qualifications</h2>
+  <div class="mt-8 grid gap-8 sm:grid-cols-2">
+    {groups.map((group) => (
+      <div>
+        <p class="font-medium">{group.data.group}</p>
+        <ul class="mt-2 list-inside list-disc text-muted-foreground">
+          {group.data.items.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</section>
