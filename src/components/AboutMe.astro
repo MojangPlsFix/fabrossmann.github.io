@@ -1,5 +1,5 @@
 ---
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { AvatarBlock } from "@/components/AvatarBlock";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { profile } from "@/data/profile";
@@ -14,10 +14,7 @@ const myftbYears = yearsSince(profile.myftbStartDate);
   <h2 class="text-3xl font-medium">About Me</h2>
   <div class="mt-8 flex flex-col gap-8 sm:flex-row sm:items-start">
     <div class="flex flex-shrink-0 flex-col items-center gap-3 sm:items-start">
-      <Avatar className="size-32">
-        <AvatarImage src="/images/me.jpg" alt={profile.name} />
-        <AvatarFallback>FR</AvatarFallback>
-      </Avatar>
+      <AvatarBlock className="size-32" src="/images/me.jpg" alt={profile.name} fallback="FR" client:load />
       <div class="text-center sm:text-left">
         <p class="font-medium">{profile.name}</p>
         <p class="text-sm text-muted-foreground">{profile.title}</p>
@@ -35,8 +32,8 @@ const myftbYears = yearsSince(profile.myftbStartDate);
         sailing, tinkering with PC hardware, or losing time to a good game.
       </p>
       <div class="mt-6 flex flex-wrap gap-2">
-        <Badge variant="secondary">{knappYears} {knappYears === 1 ? "yr" : "yrs"} at Knapp</Badge>
-        <Badge variant="secondary">{myftbYears} {myftbYears === 1 ? "yr" : "yrs"} at MyFTB</Badge>
+        <Badge variant="secondary">{`${knappYears} ${knappYears === 1 ? "yr" : "yrs"} at Knapp`}</Badge>
+        <Badge variant="secondary">{`${myftbYears} ${myftbYears === 1 ? "yr" : "yrs"} at MyFTB`}</Badge>
         <Badge variant="secondary">Coding for {codingYears} yrs</Badge>
         <Badge variant="secondary">{profile.location}</Badge>
       </div>
