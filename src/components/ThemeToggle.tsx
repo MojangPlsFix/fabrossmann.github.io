@@ -3,6 +3,9 @@ import { Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function ThemeToggle() {
+  // Must start false and correct in an effect, not a lazy useState initializer --
+  // this renders during SSR where `document` doesn't exist (see 3f3d99a).
+  // Trades a brief icon flash on hydration for not crashing the build.
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
