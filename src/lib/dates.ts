@@ -1,4 +1,4 @@
-function parseToFullDate(dateIso: string): string {
+export function parseToFullDate(dateIso: string): string {
   const parts = dateIso.split("-");
   const year = parts[0];
   const month = parts[1] ?? "01";

@@ -1,11 +1,13 @@
 ---
 // src/components/ResumeTimeline.astro
 import { getCollection } from "astro:content";
+import { parseToFullDate } from "@/lib/dates";
 import TimelineEntry from "./TimelineEntry.astro";
 
 const allEntries = await getCollection("timeline");
 const byStartDate = (a: (typeof allEntries)[number], b: (typeof allEntries)[number]) =>
-  a.data.startDate.localeCompare(b.data.startDate);
+  new Date(parseToFullDate(a.data.startDate)).getTime() -
+  new Date(parseToFullDate(b.data.startDate)).getTime();
 
 const education = allEntries.filter((e) => e.data.category === "education").sort(byStartDate);
 const experience = allEntries.filter((e) => e.data.category === "experience").sort(byStartDate);

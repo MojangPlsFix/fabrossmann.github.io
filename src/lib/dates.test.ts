@@ -1,5 +1,19 @@
 import { describe, it, expect } from "vitest";
-import { calculateAge, yearsSince, formatDateRange } from "./dates";
+import { calculateAge, yearsSince, formatDateRange, parseToFullDate } from "./dates";
+
+describe("parseToFullDate", () => {
+  it("pads a year-only date to January 1st", () => {
+    expect(parseToFullDate("2011")).toBe("2011-01-01");
+  });
+
+  it("pads a year-month date to the 1st of the month", () => {
+    expect(parseToFullDate("2020-02")).toBe("2020-02-01");
+  });
+
+  it("passes a full date through unchanged", () => {
+    expect(parseToFullDate("2020-02-15")).toBe("2020-02-15");
+  });
+});
 
 describe("calculateAge", () => {
   it("returns the age when the birthday already happened this year", () => {
