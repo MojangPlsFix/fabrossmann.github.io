@@ -36,7 +36,7 @@ const {
     </header>
     <slot />
     <footer class="py-10 text-center text-sm text-muted-foreground">
-      © {new Date().getFullYear()} {profile.name}
+      {`© ${new Date().getFullYear()} ${profile.name}`}
     </footer>
   </body>
 </html>
