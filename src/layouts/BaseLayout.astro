@@ -1,0 +1,42 @@
+---
+import "../styles/global.css";
+import { profile } from "@/data/profile";
+import { ThemeToggle } from "@/components/ThemeToggle";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title = `${profile.name} — ${profile.title}`,
+  description = "Portfolio of Fabian Roßmann, Software Engineer.",
+} = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="google-site-verification" content="QPDbfYNerfpvG95j-CXuzXi5bQdlP_fkv84RBPSCYqg" />
+    <meta name="author" content={profile.name} />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <script is:inline>
+      const theme =
+        localStorage.getItem("theme") ??
+        (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.classList.toggle("dark", theme === "dark");
+    </script>
+  </head>
+  <body>
+    <header class="fixed right-4 top-4 z-50">
+      <ThemeToggle client:load />
+    </header>
+    <slot />
+    <footer class="py-10 text-center text-sm text-muted-foreground">
+      © {new Date().getFullYear()} {profile.name}
+    </footer>
+  </body>
+</html>
