@@ -1,0 +1,45 @@
+---
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { profile } from "@/data/profile";
+import { calculateAge, yearsSince } from "@/lib/dates";
+
+const age = calculateAge(profile.birthDate);
+const codingYears = yearsSince(profile.codingSince);
+const knappYears = yearsSince(profile.knappStartDate);
+const myftbYears = yearsSince(profile.myftbStartDate);
+---
+<section id="about" class="mx-auto max-w-3xl px-6 py-24">
+  <h2 class="text-3xl font-medium">About Me</h2>
+  <div class="mt-8 flex flex-col gap-8 sm:flex-row sm:items-start">
+    <div class="flex flex-shrink-0 flex-col items-center gap-3 sm:items-start">
+      <Avatar class="size-32">
+        <AvatarImage src="/images/me.jpg" alt={profile.name} />
+        <AvatarFallback>FR</AvatarFallback>
+      </Avatar>
+      <div class="text-center sm:text-left">
+        <p class="font-medium">{profile.name}</p>
+        <p class="text-sm text-muted-foreground">{profile.title}</p>
+      </div>
+      <Button asChild variant="outline" size="sm">
+        <a href="/cv.pdf" target="_blank">Download CV</a>
+      </Button>
+    </div>
+    <div>
+      <p class="text-lg leading-relaxed text-muted-foreground">
+        I'm a {age}-year-old software engineer based in {profile.location}, currently building
+        software at Knapp Systemintegration GmbH. I started coding at 11 and never really
+        stopped — these days that also means volunteering as an admin and developer for MyFTB, a
+        large German Minecraft network, on the side. Outside of work you'll usually find me
+        sailing, tinkering with PC hardware, or losing time to a good game.
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        <Badge variant="secondary">{knappYears} {knappYears === 1 ? "yr" : "yrs"} at Knapp</Badge>
+        <Badge variant="secondary">{myftbYears} {myftbYears === 1 ? "yr" : "yrs"} at MyFTB</Badge>
+        <Badge variant="secondary">Coding for {codingYears} yrs</Badge>
+        <Badge variant="secondary">{profile.location}</Badge>
+      </div>
+    </div>
+  </div>
+</section>
