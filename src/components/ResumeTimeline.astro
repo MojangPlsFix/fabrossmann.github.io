@@ -1,0 +1,31 @@
+---
+// src/components/ResumeTimeline.astro
+import { getCollection } from "astro:content";
+import TimelineEntry from "./TimelineEntry.astro";
+
+const allEntries = await getCollection("timeline");
+const byStartDate = (a: (typeof allEntries)[number], b: (typeof allEntries)[number]) =>
+  a.data.startDate.localeCompare(b.data.startDate);
+
+const education = allEntries.filter((e) => e.data.category === "education").sort(byStartDate);
+const experience = allEntries.filter((e) => e.data.category === "experience").sort(byStartDate);
+---
+<section id="resume" class="mx-auto max-w-3xl px-6 py-24">
+  <h2 class="text-3xl font-medium">Resume</h2>
+  <div class="mt-10">
+    <h3 class="text-xl font-medium">Education</h3>
+    <ul class="mt-4 space-y-4">
+      {education.map((entry) => (
+        <TimelineEntry entry={entry} />
+      ))}
+    </ul>
+  </div>
+  <div class="mt-10">
+    <h3 class="text-xl font-medium">Experience</h3>
+    <ul class="mt-4 space-y-4">
+      {experience.map((entry) => (
+        <TimelineEntry entry={entry} />
+      ))}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+---
+// src/components/TimelineEntry.astro
+import type { CollectionEntry } from "astro:content";
+import { formatDateRange } from "@/lib/dates";
+
+interface Props {
+  entry: CollectionEntry<"timeline">;
+}
+const { entry } = Astro.props;
+const { org, title, url, startDate, endDate } = entry.data;
+const range = formatDateRange(startDate, endDate);
+---
+<li class="border-l-2 border-border pl-4">
+  <p class="text-sm text-muted-foreground">{range}</p>
+  <p class="font-medium">{title}</p>
+  {url ? (
+    <a href={url} target="_blank" rel="noreferrer" class="underline-offset-4 hover:underline">
+      {org}
+    </a>
+  ) : (
+    <p>{org}</p>
+  )}
+</li>
