@@ -43,4 +43,8 @@ describe("formatDateRange", () => {
       "Feb 2020 – Present (6 yrs)"
     );
   });
+
+  it("uses the singular \"yr\" for a one-year range", () => {
+    expect(formatDateRange("2025", "2026")).toBe("2025 – 2026 (1 yr)");
+  });
 });
