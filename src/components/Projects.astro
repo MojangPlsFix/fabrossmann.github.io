@@ -1,0 +1,14 @@
+---
+import { getCollection } from "astro:content";
+import ProjectCard from "./ProjectCard.astro";
+
+const projects = (await getCollection("projects")).sort((a, b) => a.data.order - b.data.order);
+---
+<section id="projects" class="mx-auto max-w-4xl px-6 py-24">
+  <h2 class="text-3xl font-medium">Projects</h2>
+  <div class="mt-8 grid gap-6 sm:grid-cols-3">
+    {projects.map((project) => (
+      <ProjectCard project={project} />
+    ))}
+  </div>
+</section>

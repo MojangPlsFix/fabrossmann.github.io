@@ -1,0 +1,10 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { ProjectDialog } from "./ProjectDialog";
+
+interface Props {
+  project: CollectionEntry<"projects">;
+}
+const { project } = Astro.props;
+---
+<ProjectDialog project={project.data} client:load />
