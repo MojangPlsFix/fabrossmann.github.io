@@ -8,7 +8,7 @@ const timeline = defineCollection({
     category: z.enum(["education", "experience"]),
     org: z.string(),
     title: z.string(),
-    url: z.string().url().optional(),
+    url: z.url().optional(),
     startDate: z.string(),
     endDate: z.string().optional(),
   }),
@@ -19,7 +19,7 @@ const projects = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    url: z.string().url().optional(),
+    url: z.url().optional(),
     image: z.string().optional(),
     order: z.number(),
   }),
