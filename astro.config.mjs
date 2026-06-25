@@ -9,7 +9,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://fabrossmann.github.io',
+  site: 'https://mojangplsfix.github.io',
 
   vite: {
     plugins: [tailwindcss()],
